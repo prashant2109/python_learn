@@ -1,0 +1,19 @@
+MVT:kumar_data MYSQL
+    It is a software design pattern.
+    Model:
+        --> It is used for maintaining data.
+        --> The Model helps to handle the database.
+        --> It is a data access layer which handles the data.
+    
+    View:
+        --> It is used to execute business logic and iteract with model to carry data and render template.
+    
+    Template:
+        --> It is a presentation layer which handles user interface part.
+        --> Django needs a convenient to generate html. The Most approach relies 
+            on templates.
+        --> The templates consists of static parts of the desired html as well as
+            some special syntax of Django Template Language.
+
+
+    

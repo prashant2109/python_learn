@@ -1,0 +1,89 @@
+Iterable:
+    It means that , something that can be looped over.
+    List is an iterable, because we can loop over a list.
+
+    How can we tell if something can be looped over or not?
+    -->An object should have "__iter__()" method.
+    -->There is no "__next__()" in list, so it is not an iterator.
+    -->List doesn't have a state, and it doesn't know how to get the next value.
+       Therefore, it isn't an iterator.
+    --> Something needs to be iterable, it should have __iter__() method.
+    
+    Iterables are not iterators.But can be converted to iterator using "__iter__()" on an iterable object.
+    -F>Iterables are objects that can be looped over. 
+
+Iterator:
+    An object with a state, such that it remembers where it is during iteration.
+    An Iterator knows how to get the next value.
+    In iterator we get next value using "__next__()"
+    A characteristic of an iterator is, it only goes forward, no reseting, no backward or making a copy of it. unlike iterable.
+
+
+Abstract:
+    --> Abstract class is a class where abstract methods are implemented.
+    --> Abstract class can be considered as template for sub class where abstract class inherited.
+    --> It is being created when we want to create a class which should not be instantiated, and where all 
+        its abstract methods should be there in the subclass.
+    --> A method which has only declaration but no implementation is called abstract method.
+    --> By default python doesn't support abstract class, for that you
+        need to import ABC module.
+    --> In simple words, Abstraction is nothing but hiding implementation.
+    --> Abstraction is the process of hiding the real implementation of an application from the user and emphasizing only on the usage of it.
+
+
+Garbage Collection(Memory Management):
+    --> Memory management is the process by which applications read and write data. A memory manager determines where to put an application’s    data.This process of providing memory is generally called memory allocation.
+    --> Memory management for your Python code is handled by the Python application.
+    --> Python allows you to inspect the current reference count of an object with the sys module. You can use sys.getrefcount(numbers), but keep in mind that passing in the object to getrefcount() increases the reference count by 1.
+    --> If object's reference count reaches 0, memory is deallocated from the memory.(frees, the memory) 
+
+
+Encapsulation:(Face Prep)
+    --> Encapsulation in Python is the process of wrapping up variables and methods into a single entity.
+    --> In programming, a class is an example that wraps all the variables and methods defined inside it.
+    --> Restricting the data access using functions is known as encapsulation. 
+    --> Encapsulation can be achieved by declaring the data members of a class either as private or protected.
+    ------------------------------------------------------------------------------------------------------------------------------------
+    --> Encapsulation is the process of wrapping up varibles and methods into a single entity, which restricts 
+        direct access to the data, that prevents from accidental modification of data.Encapsulation can be achieved
+        by declaring data members(attributes and methods) of a class private or protected.
+
+Polymorphism:
+    --> It is an ability to take many forms.
+        Ex: (1+2) = 3, ("1"+"2") = "12"
+    --> Sometimes an object comes in many types or forms.
+    --> If we have a button, there are different draw outputs(round button, check button, button ...) but they do share 
+        the same logic onClick().
+    --> we can access them using the same method.This concept is known as polymorphism.
+    ------------------------------------------------------------------------------------------------------------------------------------
+    --> The literal meaning of polymorphism is the condition of occurrence in different forms.
+    --> Polymorphism defines the ability to take different forms.
+    --> It refers to the use of a single type entity (method, operator or object) to represent different types in different scenarios.
+    --> It means that the same function name can be used for different types.
+    --> Ex: Polymorphism in addition operator.
+    --> Ex2:Functions in python
+            There are some functions in Python which are compatible to run with multiple data types. len()
+    --> You can create a function that can take any object, allowing for polymorphism.    
+    --> Polymorphism in python defines methods in the child class that have the same name as the methods in the parent class.
+
+Differnce between == and is :
+    --> (==) compares the values of both the operands and looks for values equality.Whereas (is) checks
+        whether both operands refer to same object or not.
+
+        
+classmethod:
+    --> A class method is a method that is bound to a class rather than its object. 
+    --> Classmethod always works with the class, since it parameter is class itself.
+    --> Classmethod can be called both with class and its object.
+    --> It can modify class state, which reflects to all instance of the class.
+
+staticmethod:
+    --> A staticmethod knows nothing about the class it just deals with given parameter.
+    --> Static method cannot modify, class or its object state.
+    --> staticmethod can't access or modify class state.
+
+python 2 and 3:
+    --> P2 - Strings are stored as ascii by default. 
+    --> P3 - text is stored as unicode by default.
+    --> P2 - bytes and string are same.
+    --> P3 - bytes and string are different.
